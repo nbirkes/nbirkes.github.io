@@ -24,12 +24,26 @@
             border-bottom: thin solid black;
         }
 
+        main {
+            clear: left;
+        }
+
+        .name {
+            margin: 0 0 2em 0;
+            float: left;
+        }
+
+        .contact {
+            float: right;
+            text-align: right;
+        }
+
         .duration {
             float: right;
             font-weight: bold;
         }
 
-        .institution {
+        .title {
             float: left;
             font-weight: bold;
         }
@@ -48,22 +62,18 @@
         li {
             padding-bottom: .5em;
         }
-
-        .methodologies {
-            display: flex;
-            justify-content: space-evenly;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Nathan Birkes</h1>
-        <address>
-            9105 Links Cir., Waco, TX 76708
-        </address>
-        <div>254-644-7382</div>
-        <div>nbirkes@icloud.com</div>
+        <h1 class="name">Nathan Birkes</h1>
+        <div class="contact">
+            <address>
+                9105 Links Cir., Waco, TX 76708
+            </address>
+            <div>254-644-7382</div>
+            <div>nbirkes@icloud.com</div>
+        </div>
     </header>
     <main>
         <section>
@@ -110,11 +120,14 @@
                     CodeBuild,
                     DynamoDB,
                     EC2,
-                    ECS IAM,
+                    ECS,
+                    IAM,
                     Lambda,
-                    RDS S3,
+                    RDS,
+                    S3,
                     SNS,
-                    SQS StepFunctions,
+                    SQS,
+                    StepFunctions,
                     VPC,
                     npm,
                     yarn,
@@ -155,23 +168,22 @@
             <h2>Professional Experience</h2>
             <div class="job">
                 <div class="duration">2019-present</div>
-                <div class="institution">Senior Software Developer</div>
+                <div class="title">Senior Software Developer</div>
                 <div class="subtitle">Carl Zeiss Meditec AG</div>
                 <ul>
-                    <li>ZEISS Veracity Surgical is a cataract planning software that collates data from EMRs, medical diagnostic devices in the AWS cloud and allows providers to develop a surgical plan for cataract surgeries and analyze surgical outcome analytics.</li>
                     <li>Rewrote existing CallistoEYE backend integration to unify logic & developed new interface to improve customer experience.</li>
-                    <li>Worked in a team of 3 to rebuild the internal medical documents templating & generation engine. Coded new React Hooks frontend UI to integrate with backend apis that we also built.</li>
+                    <li>Worked in a team to rebuild medical document template and generation engine using React Hooks and ExpressJS handlers.</li>
                     <li>Developed the "Device Dashboard" as a user friendly React app to give the user insight into the health of their devices using existing data sources.</li>
-                    <li>Closely monitored error logs to implement bug fixes to reduce support calls. Reduced error rate from 100,000 to 30,000 per day, more improvements happen on a daily basis.</li>
-                    <li>Used Cloudwatch to debug, monitor and analyze AWS resource usage metrics. Applied resources updates to prevent outages.</li>
+                    <li>Closely monitored error logs to implement bug fixes to reduce support calls. Reduced daily error rate by 70%.</li>
+                    <li>Utilized AWS Cloudwatch to monitor and analyze usage to proactively prevent outages.</li>
                     <li>Developed a consolidated staging/integration test system using Selenium and ECS. Refactored existing CI/CD pipeline to only deploy on successful test run and generate reports on completion.</li>
-                    <li>Rewrote existing queueing system to reduce complexity, maintenance time and noisy neighbor issues. Lambda and SQS triggers used under the hood.</li>
+                    <li>Rewrote existing queueing system by using Lambda and SQS to reduce complexity, maintenance burden and avoid noisy neighbor issues.</li>
                 </ul>
             </div>
             <div class="job">
                 <div class="duration">2017-2019</div>
-                <div class="institution">DevOps Engineer</div>
-                <div class="subtitle">Veracity Innovations, LLC</div>
+                <div class="title">DevOps Engineer</div>
+                <div class="subtitle">Carl Zeiss Meditec AG</div>
                 <ul>
                     <li>Designed a simple ETL system to analyze all surgical procedures & transform document data to a normalized PostgreSQL table structure which served as the data source for the outcomes data analytics UI. Basic CLI commands are used to schedule re-processing of data after hours.</li>
                     <li>Developed a mock EMR application to allow domain experts to insert customizeable medical data into the cataract planning system for trade show demonstrations.</li>
@@ -186,10 +198,9 @@
             </div>
             <div class="job">
                 <div class="duration">2012-2017</div>
-                <div class="institution">Senior Developer / IT Manager</div>
-                <div class="subtitle">Late Model Restoration, Hewitt, TX</div>
+                <div class="title">Senior Developer / IT Manager</div>
+                <div class="subtitle">Late Model Restoration, Inc.</div>
                 <ul>
-                    <li>Late Model Restoration is an e-commerce retailer for aftermarket and original parts for Ford Mustangs. I joined when the business first started at the bottom of the ranks to become the sole software developer and IT manager. Over time I became manager to 3 developers, 1 graphic designer and 1 IT administrator. I developed the entire digital footprint of the business, which generated $30 million in sales at the time of my departure.</li>
                     <li>Lead team to continually refine and integrate a full MS stack e-commerce solution increasing sales by 25% while decreasing human interaction & errors.</li>
                     <li>Built and configured the web application from the ground up. Managing domain names, SSL certificates, DNS, DB and application servers (IIS/SQL Server), build & deployment servers, source control, DB design, HTML/CSS/JS, application architecture and much more.</li>
                     <li>Automated testing included unit & integration testing of all mission critical functionality.</li>
@@ -199,8 +210,8 @@
             </div>
             <div>
                 <div class="duration">2005-2012</div>
-                <div class="institution">Developer</div>
-                <div class="subtitle">Late Model Restoration, Hewitt, TX</div>
+                <div class="title">Developer</div>
+                <div class="subtitle">Late Model Restoration, Inc.</div>
                 <ul>
                     <li>Built a custom shopping cart & data connector to integrate with Sage 100 ERP and to replace an e-commerce platform that did not allow enough extensibility to keep up with evolving business needs.  Development from scratch allowed for a flexible foundation for future growth.</li>
                     <li>Mirrored sales tax calculation logic & integrated credit card authorization via API, synchronizing warehouse and product data among others in an effort to develop a streamlined system that directed sales orders from the internet to the warehouse printer with minimal human interaction needed.</li>
@@ -208,8 +219,8 @@
             </div>
             <div>
                 <div class="duration">2002-2005</div>
-                <div class="institution">Webmaster / Web & Marketing Assistant</div>
-                <div class="subtitle">Late Model Restoration, Robinson, TX</div>
+                <div class="title">Webmaster / Web & Marketing Assistant</div>
+                <div class="subtitle">Late Model Restoration, Inc.</div>
                 <ul>
                     <li>Managed e-commerce website using: AbleCommerce, Sage MAS 3.71, ColdFusion, HTML, Adobe Photoshop, Adobe Illustrator</li>
                     <li>Made updates to ColdFusion & HTML to improve site layout.</li>
@@ -220,36 +231,21 @@
         <section>
             <h2>Education</h2>
             <div>
-                <div class="duration">2000-2003</div>
-                <div class="institution">McLennan Community College</div>
+                <div class="title">McLennan Community College</div>
                 <div class="subtitle">Web Page, Digital/Multimedia and Information Resources Design</div>
-            </div>
-            <div>
-                <div class="duration">1987-2000</div>
-                <div class="institution">Chilton ISD</div>
-                <div class="subtitle">High School Diploma</div>
             </div>
         </section>
         <section>
             <h2>Certifications</h2>
             <div>
                 <div class="duration">2018-2020</div>
-                <div class="institution">Amazon Web Services</div>
+                <div class="title">Amazon Web Services</div>
                 <div class="subtitle">AWS Certified Developer - Credential ID: KELYDM4CJM4Q18WY</div>
             </div>
             <div>
                 <div class="duration">2017-2019</div>
-                <div class="institution">Amazon Web Services</div>
+                <div class="title">Amazon Web Services</div>
                 <div class="subtitle">AWS Certified Solutions Architect - Credential ID: Z0TEZWR2C2FQ1M9H</div>
-            </div>
-        </section>
-        <section>
-            <h2>Methodologies</h2>
-            <div class="methodologies">
-                <div>Automated Testing</div>
-                <div>Integrations</div>
-                <div>Patterns & Principles</div>
-                <div>Full Stack Development</div>
             </div>
         </section>
     </main>
